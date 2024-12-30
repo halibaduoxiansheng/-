@@ -1,0 +1,20 @@
+1、如果您安装10.0.1版本Omnipeek成功后在运行时会出现闪退或者蓝屏，请您使用如下7.9版本，经测试此版本兼容性最好：
+Omnipeek 7.9.1可用于Win10:
+
+链接：https://pan.baidu.com/s/1nFggXXtcgA-ArhWZGqYR4w 密码：nhza
+注册机中Product Version输入：79
+
+2、如果您的电脑有杀毒软件，需要一个纯净的无注册机的压缩包，可使用如下链接：
+Omnipeek 10.0.1 纯软件 链接：https://pan.baidu.com/s/1qZEYyg0 密码：0ly6
+
+3、如果您需要更新的版本可使用如下链接：
+Omnipeek 11.1.1: 链接: https://pan.baidu.com/s/1chk2bO 密码: teq1
+注册机中Product Version输入：111
+Omnipeek 11.1: 链接: https://pan.baidu.com/s/1bpGYjHd 密码: 28a9
+注册机中Product Version输入：111
+Omnipeek 11.0.1: 链接: https://pan.baidu.com/s/1i57Yrp7 密码: m4ap
+注册机中Product Version输入：110
+
+4、如果您这些版本都无法安装，您可以下载如下虚拟机镜像，虚拟机内已经安装好相关驱动和Omnipeek软件可直接使用：
+Win7 64位虚拟机：
+链接：https://pan.baidu.com/s/1UC7TTE-I5P4dAJSqvBYUsw 密码：aauh

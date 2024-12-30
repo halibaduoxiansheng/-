@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filters>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="1" name="AppleTalk" comment="AppleTalk packets" color="16213">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="BC1B0000" slicetoheader="0"/>
+				</filternode>
+				<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="C2010000" slicetoheader="0"/>
+					</filternode>
+				</ornode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="2" name="Broadcast" comment="Physical layer broadcasts" color="8388736">
+			<rootnode clsid="{2D2D9B91-08BF-44CF-B240-F0BBADBF21B5}">
+				<filternode inverted="0" comment="">
+					<addr1 class="2" type="10" data="FFFFFFFFFFFF"/>
+					<addr2 class="2" type="10" mask="0" data="000000000000"/>
+					<accept1to2 data="0"/>
+					<accept2to1 data="1"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="3" name="DHCP" comment="DHCP packets" color="5603072">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="91050000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="4" name="DNS" comment="DNS packets" color="5578538">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="85050000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="5" name="FTP" comment="FTP data or control packets" color="16744448">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="7A050000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="6" name="ICMP" comment="ICMP packets" color="5570645">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="4C040000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="7" name="IP" comment="IP, ARP, or RARP packets" color="16255">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="E8030000" slicetoheader="0"/>
+				</filternode>
+				<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="F4010000" slicetoheader="0"/>
+					</filternode>
+					<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+						<filternode inverted="0" comment="">
+							<protocol class="1" type="9" data="FE010000" slicetoheader="0"/>
+						</filternode>
+					</ornode>
+				</ornode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="8" name="UDP" comment="UDP packets" color="8388608">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="DC050000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="9" name="Multicast" comment="Physical layer multicast ethernet packets" color="32724">
+			<rootnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+				<filternode inverted="0" comment="">
+					<value type="0" data="1"/>
+					<mask type="0" data="1"/>
+					<offset data="0"/>
+					<op data="1"/>
+					<flags data="0"/>
+				</filternode>
+				<andnode clsid="{2D2D9B91-08BF-44CF-B240-F0BBADBF21B5}">
+					<filternode inverted="1" comment="">
+						<addr1 class="2" type="10" data="FFFFFFFFFFFF"/>
+						<addr2 class="2" type="10" mask="0" data="000000000000"/>
+						<accept1to2 data="1"/>
+						<accept2to1 data="1"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="10" name="Wireless Multicast" comment="Physical layer multicast wireless packets" color="32724">
+			<rootnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+				<filternode inverted="0" comment="">
+					<value type="0" data="1"/>
+					<mask type="0" data="1"/>
+					<offset data="4"/>
+					<op data="1"/>
+					<flags data="0"/>
+				</filternode>
+				<andnode clsid="{2D2D9B91-08BF-44CF-B240-F0BBADBF21B5}">
+					<filternode inverted="1" comment="">
+						<addr1 class="2" type="10" data="FFFFFFFFFFFF"/>
+						<addr2 class="2" type="10" mask="0" data="000000000000"/>
+						<accept1to2 data="1"/>
+						<accept2to1 data="1"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="11" name="NBP" comment="AppleTalk NBP packets" color="32768">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="C01B0000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="12" name="NetWare" comment="NetWare packets" color="8421376">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="A60E0000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="13" name="OSI" comment="OSI packets" color="8388736">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="401F0000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="14" name="Telnet" comment="Telnet packets" color="11141332">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="79050000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="15" name="HTTP" comment="HTTP packets (web)" color="168">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="8A050000" slicetoheader="0"/>
+				</filternode>
+				<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="93050000" slicetoheader="0"/>
+					</filternode>
+					<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+						<filternode inverted="0" comment="">
+							<protocol class="1" type="9" data="AE050000" slicetoheader="0"/>
+						</filternode>
+					</ornode>
+				</ornode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="16" name="Error" comment="Error packets" color="255">
+			<rootnode clsid="{D0BDFB3F-F72F-4AEF-8E17-B16D4D3543FF}">
+				<filternode inverted="0" comment="">
+					<errorflags data="54"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="17" name="802.11 Data" comment="Data packets" color="40704">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="CA000000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="18" name="802.11 Management" comment="Management packets" color="212">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="C9000000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="19" name="802.11 No Beacons" comment="Exclude beacon packets" color="5603072">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="1" comment="">
+					<protocol class="1" type="9" data="E2000000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="20" name="802.11 Protected Packets" comment="Protected packets" color="32768">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="05000000" slicetoheader="0"/>
+				</filternode>
+				<andnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+					<filternode inverted="0" comment="">
+						<value type="0" data="64"/>
+						<mask type="0" data="64"/>
+						<offset data="1"/>
+						<op data="1"/>
+						<flags data="0"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="21" name="802.11 To DS" comment="Packets to DS" color="11190016">
+			<rootnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+				<filternode inverted="0" comment="">
+					<value type="0" data="1"/>
+					<mask type="0" data="1"/>
+					<offset data="1"/>
+					<op data="1"/>
+					<flags data="0"/>
+				</filternode>
+				<andnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="05000000" slicetoheader="0"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="22" name="802.11 From DS" comment="Packets from DS" color="32724">
+			<rootnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+				<filternode inverted="0" comment="">
+					<value type="0" data="2"/>
+					<mask type="0" data="2"/>
+					<offset data="1"/>
+					<op data="1"/>
+					<flags data="0"/>
+				</filternode>
+				<andnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="05000000" protospecpath="5" slicetoheader="0"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="23" name="802.11 More Fragments" comment="More fragments bit on" color="5570645">
+			<rootnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+				<filternode inverted="0" comment="">
+					<value type="0" data="4"/>
+					<mask type="0" data="4"/>
+					<offset data="1"/>
+					<op data="1"/>
+					<flags data="0"/>
+				</filternode>
+				<andnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="05000000" slicetoheader="0"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="24" name="802.11 Retry" comment="Retry bit on" color="32724">
+			<rootnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+				<filternode inverted="0" comment="">
+					<value type="0" data="8"/>
+					<mask type="0" data="8"/>
+					<offset data="1"/>
+					<op data="1"/>
+					<flags data="0"/>
+				</filternode>
+				<andnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="05000000" slicetoheader="0"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="25" name="802.11 Order" comment="Order bit on" color="85">
+			<rootnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+				<filternode inverted="0" comment="">
+					<value type="0" data="128"/>
+					<mask type="0" data="128"/>
+					<offset data="1"/>
+					<op data="1"/>
+					<flags data="0"/>
+				</filternode>
+				<andnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="05000000" slicetoheader="0"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="26" name="802.11 More Data" comment="More data bit on" color="40704">
+			<rootnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+				<filternode inverted="0" comment="">
+					<value type="0" data="32"/>
+					<mask type="0" data="32"/>
+					<offset data="1"/>
+					<op data="1"/>
+					<flags data="0"/>
+				</filternode>
+				<andnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="05000000" slicetoheader="0"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="27" name="802.11 Control" comment="Control packets" color="8388608">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="C8000000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="28" name="802.11 Beacons" comment="Beacon packets" color="5570645">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="E2000000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="29" name="AppleTalk Broadcast" comment="Packets to the AppleTalk broadcast address" color="16744448">
+			<rootnode clsid="{2D2D9B91-08BF-44CF-B240-F0BBADBF21B5}">
+				<filternode inverted="0" comment="">
+					<addr1 class="2" type="20" mask="536870912" data="0000FF"/>
+					<addr2 class="2" type="20" mask="0" data="000000"/>
+					<accept1to2 data="1"/>
+					<accept2to1 data="1"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="30" name="NetBIOS" comment="NetBIOS packets" color="128">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="95050000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="31" name="POP" comment="POP packets (email)" color="32896">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="7D050000" slicetoheader="0"/>
+				</filternode>
+				<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="8E050000" slicetoheader="0"/>
+					</filternode>
+				</ornode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="32" name="SMB" comment="SMB packets" color="8388608">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="D4170000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="33" name="SMTP" comment="SMTP packets (email)" color="8421376">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="81050000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="34" name="TCP" comment="TCP packets" color="16711680">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="78050000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="35" name="802.11 Ad-Hoc Network" comment="Beacon frames with IBSS = 1" color="192">
+			<rootnode clsid="{838F0E57-0D9F-4095-9C12-F1040C84E428}">
+				<filternode inverted="0" comment="">
+					<value type="2" data="2"/>
+					<mask type="2" data="2"/>
+					<offset data="34"/>
+					<op data="1"/>
+					<flags data="0"/>
+				</filternode>
+				<andnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="E2000000" slicetoheader="0"/>
+					</filternode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="36" name="DECnet" comment="DECnet packets" color="32724">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="1" mask="2147483648" data="6000" slicetoheader="0"/>
+				</filternode>
+				<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" mask="192" data="88130000" slicetoheader="0"/>
+					</filternode>
+				</ornode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="37" name="Frame Relay LMI" comment="Frame Relay management packets" color="8421504">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="20000000" slicetoheader="0"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="38" name="PPP Link and Control" comment="PPP IP and Link Control packets and Link Quality Report packets" color="16711680">
+			<rootnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+				<filternode inverted="0" comment="">
+					<protocol class="1" type="9" data="19000000" slicetoheader="0"/>
+				</filternode>
+				<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="1A000000" slicetoheader="0"/>
+					</filternode>
+					<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+						<filternode inverted="0" comment="">
+							<protocol class="1" type="9" data="1C000000" slicetoheader="0"/>
+						</filternode>
+					</ornode>
+				</ornode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="39" name="Wireless Error" comment="Wireless Error packets" color="255">
+			<rootnode clsid="{D0BDFB3F-F72F-4AEF-8E17-B16D4D3543FF}">
+				<filternode inverted="0" comment="">
+					<errorflags data="2"/>
+				</filternode>
+			</rootnode>
+		</filter>
+	</filterobj>
+	<filterobj clsid="{22353029-A733-4FCC-8AC0-782DA33FA464}">
+		<filter id="47" name="EWSA" comment="" color="0">
+			<rootnode clsid="{2D2D9B91-08BF-44CF-B240-F0BBADBF21B5}">
+				<filternode inverted="0" comment="">
+					<addr1 class="2" type="13" data="ACF1DFD2BF98"/>
+					<addr2 class="2" type="13" mask="0" data="000000000000"/>
+					<accept1to2 data="1"/>
+					<accept2to1 data="1"/>
+				</filternode>
+				<andnode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+					<filternode inverted="0" comment="">
+						<protocol class="1" type="9" data="E5000000" slicetoheader="0"/>
+					</filternode>
+					<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+						<filternode inverted="0" comment="">
+							<protocol class="1" type="9" data="DC000000" slicetoheader="0"/>
+						</filternode>
+						<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+							<filternode inverted="0" comment="">
+								<protocol class="1" type="9" data="40380000" slicetoheader="0"/>
+							</filternode>
+							<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+								<filternode inverted="0" comment="">
+									<protocol class="1" type="9" data="B0360000" slicetoheader="0"/>
+								</filternode>
+								<ornode clsid="{F4342DAD-4A56-4ABA-9436-6E3C30DAB1C8}">
+									<filternode inverted="0" comment="">
+										<protocol class="1" type="9" data="F3000000" slicetoheader="0"/>
+									</filternode>
+								</ornode>
+							</ornode>
+						</ornode>
+					</ornode>
+				</andnode>
+			</rootnode>
+		</filter>
+	</filterobj>
+</filters>
+

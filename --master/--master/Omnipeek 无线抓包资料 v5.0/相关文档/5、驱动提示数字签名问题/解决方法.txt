@@ -1,0 +1,9 @@
+此问题解决方法：
+如果您是Win7系统参考 《Win7系统解决方法说明.jpg》；
+
+如果您是Win8、Win10系统参考以下链接方法关闭强制驱动程序数字签名：
+方法一：Win10关闭强制驱动签名（需要重启）：https://jingyan.baidu.com/article/624e74594dbc8d34e8ba5aa6.html
+方法二：Win10关闭强制驱动签名：
+https://jingyan.baidu.com/article/4853e1e5468e591909f72685.html
+建议您使用方法一，如果参照方法一设置后每次重启都会失效的话，请关闭BIOS中的安全启动（Secure Boot），然后参考方法一重新设置一下就永久生效了。
+
